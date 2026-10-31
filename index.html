@@ -1,1 +1,115 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kingmor E184</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div class="brand">
+      <div class="logo">K</div>
+      <div>
+        <h2>KINGMOR</h2>
+        <span>E184 PROTECTION TESTER</span>
+      </div>
+    </div>
+
+    <div class="online">
+      <i></i> ONLINE
+    </div>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow">SOURCE INSPECTION TOOL</span>
+    <h1>Kingmor <span>Analyzer.</span></h1>
+    <p>Inspect your protected Luau scripts and evaluate visible source information.</p>
+  </section>
+
+  <section class="workspace">
+
+    <div class="panel">
+      <div class="panel-header">
+        <h3>01 / INPUT</h3>
+        <span>LUAU SOURCE</span>
+      </div>
+
+      <textarea id="source" placeholder="Paste your protected Luau code here..."></textarea>
+
+      <div class="controls">
+        <label class="upload">
+          Upload file
+          <input type="file" id="file" accept=".lua,.luau,.txt">
+        </label>
+
+        <span id="characterCount">0 characters</span>
+      </div>
+
+      <button id="analyze" class="main-button">
+        ANALYZE SOURCE →
+      </button>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <h3>02 / OUTPUT</h3>
+        <span id="status">WAITING</span>
+      </div>
+
+      <pre id="output">Your analysis will appear here...</pre>
+
+      <button id="download" class="secondary" disabled>
+        DOWNLOAD REPORT
+      </button>
+    </div>
+
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <span>INPUT SIZE</span>
+      <strong id="bytes">—</strong>
+    </div>
+
+    <div class="stat">
+      <span>LINES</span>
+      <strong id="lines">—</strong>
+    </div>
+
+    <div class="stat">
+      <span>READABILITY</span>
+      <strong id="readability">—</strong>
+    </div>
+
+    <div class="stat">
+      <span>FRAGMENTS</span>
+      <strong id="fragments">—</strong>
+    </div>
+  </section>
+
+  <section class="panel fragment-panel">
+    <div class="panel-header">
+      <h3>03 / EXTRACTED FRAGMENTS</h3>
+      <span>VISIBLE LITERALS</span>
+    </div>
+
+    <div id="fragmentList">
+      No fragments found.
+    </div>
+  </section>
+
+  <footer>
+    KINGMOR E184 · SOURCE ANALYSIS
+  </footer>
+
+</div>
+
+</body>
+</html>
+
